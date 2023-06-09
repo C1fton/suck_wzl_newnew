@@ -101,7 +101,7 @@
 \pagestyle{fancy}
 \lhead{实验名称：\@expname}
 \chead{姓名：\@name}
-\rhead{学号：\@stuid}
+\rhead{组号：\@stuid}
 
 % 下划线定义
 \def\zjuu[#1]#2{
@@ -158,7 +158,7 @@
         \bfseries{姓名：}     & \@name       \\ \cline{2-2}
         \bfseries{学院：}     & \@college    \\ \cline{2-2}
         \bfseries{专业：}     & \@major      \\ \cline{2-2}
-        \bfseries{学号：}     & \@stuid      \\ \cline{2-2}
+        \bfseries{组号：}     & \@stuid      \\ \cline{2-2}
         \bfseries{指导老师：}  & \@instructor \\ \cline{2-2}
       \end{tabular}
     \end{center}
