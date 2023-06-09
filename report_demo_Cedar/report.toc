@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {\CJKnumber {1}、}ECG信号检测调理电路}{4}{}%
+\contentsline {subsection}{\numberline {1.}电路装配调试步骤}{4}{}%
+\contentsline {subsection}{\numberline {2.}电路测试数据分析}{4}{}%
+\contentsline {subsubsection}{\numberline {(1)}低通滤波部分}{4}{}%
+\contentsline {subsubsection}{\numberline {(2)}高通滤波部分}{4}{}%
+\contentsline {subsubsection}{\numberline {(3)}陷波部分}{4}{}%
+\contentsfinish 
