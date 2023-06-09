@@ -1,0 +1,89 @@
+% !TeX program = xelatex
+\documentclass{zjureport}
+\special{dvipdfmx:config z 0} % 取消PDF压缩，加快速度，最终版本生成的时候最好把这句话注释掉
+
+% =============================================
+% Part 0 Edit the info
+% =============================================
+
+\major{电子科学与技术}
+\name{雪松}
+\partner{}
+\title{本科实验报告}
+\stuid{3210100000}
+\college{信息与电子工程学院}
+\date{2022-11-10}
+\lab{东四216}
+\course{电子工程训练（甲）}
+\instructor{}
+\grades{}
+\expname{智能插座实验}
+\exptype{}
+
+
+\begin{document}
+% =============================================
+% Part 1 Header
+% =============================================
+\makecover
+
+% \makecontent
+
+\makeheader
+% =============================================
+% Part 2 Main document
+% =============================================
+
+% \begin{figure}[H] %H为当前位置，!htb为忽略美学标准，htbp为浮动图形
+%     \centering %图片居中
+%     \includegraphics[width=0.8\textwidth]{fig1-SR830structure.jpg}
+%     \caption{锁相放大器SR830结构图} %最终文档中希望显示的图片标题
+% \end{figure}
+
+
+\begin{equation}
+    \left\{\begin{array}{l}
+    \tilde{V}_{r 1}(\omega)=\pi A_r\left[e^{-i \varphi_r} \delta\left(\omega+\omega_s\right)+e^{i \varphi_r} \delta\left(\omega-\omega_s\right)\right] \\
+    \tilde{V}_{r 2}(\omega)=i \pi A_r\left[e^{-i \varphi_r} \delta\left(\omega+\omega_s\right)-e^{i \varphi_r} \delta\left(\omega-\omega_s\right)\right]
+    \end{array}\right.
+\end{equation}
+
+
+\begin{table}[H]
+    \caption{测温电路标定调试}
+    \centering
+    \begin{tabular}{L{8cm}C{3cm}}
+      \toprule
+      项目                                       & 测量值         \\
+      \midrule
+      当前实际室温（摄氏度）：                   & 18\textcelsius \\
+      \\[2pt]
+      经你完成调试后测试程序显示温度（摄氏度）： & 22\textcelsius \\
+      \\[2pt]
+      是存在严重的元器件离散性问题？（是/否）    & 否             \\
+      \bottomrule
+    \end{tabular}
+\end{table}
+
+\section{实验目的}
+
+
+\section{实验任务与要求}
+
+
+\section{实验方案设计与实验参数计算}
+
+
+\section{主要仪器设备}
+
+
+\section{实验步骤、调试过程和数据记录}
+
+
+\section{实验结果和分析处理}
+
+
+\section{讨论、心得}
+
+
+\end{document}
