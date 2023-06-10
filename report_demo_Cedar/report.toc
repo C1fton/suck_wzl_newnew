@@ -2,21 +2,23 @@
 \contentsline {subsection}{\numberline {1.}电路装配调试步骤}{3}{}%
 \contentsline {subsection}{\numberline {2.}电路测试数据分析}{3}{}%
 \contentsline {subsubsection}{\numberline {(1)}低通滤波部分}{3}{}%
-\contentsline {subsubsection}{\numberline {(2)}高通滤波部分}{3}{}%
-\contentsline {subsubsection}{\numberline {(3)}陷波部分}{3}{}%
-\contentsline {section}{\numberline {\CJKnumber {2}、}ECG心电监测系统}{3}{}%
-\contentsline {subsection}{\numberline {1.}总体目标}{3}{}%
-\contentsline {subsubsection}{\numberline {(1)}系统框图及功能说明}{3}{}%
-\contentsline {subsection}{\numberline {2.}硬件设计与调试}{3}{}%
-\contentsline {subsubsection}{\numberline {(1)}原理图设计}{3}{}%
-\contentsline {subsubsection}{\numberline {(2)}PCB设计}{3}{}%
-\contentsline {subsubsection}{\numberline {(3)}硬件调试}{3}{}%
-\contentsline {subsubsection}{\numberline {(4)}硬件电路整体性能分析}{3}{}%
-\contentsline {subsection}{\numberline {3.}软件设计与调试}{3}{}%
-\contentsline {subsubsection}{\numberline {(1)}软件工作流程框图}{3}{}%
-\contentsline {subsubsection}{\numberline {(2)}软件功能设计}{3}{}%
-\contentsline {subsubsection}{\numberline {(3)}软件调试}{3}{}%
-\contentsline {section}{\numberline {\CJKnumber {3}、}总结}{3}{}%
-\contentsline {subsection}{\numberline {1.}韩寒：}{3}{}%
-\contentsline {subsection}{\numberline {2.}谌梓轩：}{3}{}%
+\contentsline {subsubsection}{\numberline {(2)}高通滤波部分}{4}{}%
+\contentsline {subsubsection}{\numberline {(3)}陷波部分}{5}{}%
+\contentsline {subsubsection}{\numberline {(4)}总体放大性能}{6}{}%
+\contentsline {subsubsection}{\numberline {(5)}人体测试}{7}{}%
+\contentsline {section}{\numberline {\CJKnumber {2}、}ECG心电监测系统}{8}{}%
+\contentsline {subsection}{\numberline {1.}总体目标}{8}{}%
+\contentsline {subsubsection}{\numberline {(1)}系统框图及功能说明}{8}{}%
+\contentsline {subsection}{\numberline {2.}硬件设计与调试}{8}{}%
+\contentsline {subsubsection}{\numberline {(1)}原理图设计}{8}{}%
+\contentsline {subsubsection}{\numberline {(2)}PCB设计}{8}{}%
+\contentsline {subsubsection}{\numberline {(3)}硬件调试}{8}{}%
+\contentsline {subsubsection}{\numberline {(4)}硬件电路整体性能分析}{8}{}%
+\contentsline {subsection}{\numberline {3.}软件设计与调试}{8}{}%
+\contentsline {subsubsection}{\numberline {(1)}软件工作流程框图}{8}{}%
+\contentsline {subsubsection}{\numberline {(2)}软件功能设计}{8}{}%
+\contentsline {subsubsection}{\numberline {(3)}软件调试}{8}{}%
+\contentsline {section}{\numberline {\CJKnumber {3}、}总结}{8}{}%
+\contentsline {subsection}{\numberline {1.}韩寒：}{8}{}%
+\contentsline {subsection}{\numberline {2.}谌梓轩：}{8}{}%
 \contentsfinish 
