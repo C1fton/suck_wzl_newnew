@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.12.18)  9 JUN 2023 23:39
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.12.18)  10 JUN 2023 16:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -722,18 +722,62 @@ File: figures//cover.png Graphic file (type bmp)
 <figures//cover.png>
 [1
 
-] [2] (./report.toc)
+] (./report.toc)
 \tf@toc=\write3
 \openout3 = `report.toc'.
 
- [3] [4] (./report.aux) ) 
+ [2]
+File: figures//低通滤波20Hz.jpg Graphic file (type bmp)
+<figures//低通滤波20Hz.jpg>
+File: figures//低通滤波60Hz.jpg Graphic file (type bmp)
+<figures//低通滤波60Hz.jpg>
+File: figures//低通滤波100Hz.jpg Graphic file (type bmp)
+<figures//低通滤波100Hz.jpg>
+File: figures//低通滤波140Hz.jpg Graphic file (type bmp)
+<figures//低通滤波140Hz.jpg>
+File: figures//低通滤波.png Graphic file (type bmp)
+<figures//低通滤波.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figures//高通滤波20mHz.jpg Graphic file (type bmp)
+<figures//高通滤波20mHz.jpg>
+File: figures//高通滤波40mHz.jpg Graphic file (type bmp)
+<figures//高通滤波40mHz.jpg>
+File: figures//高通滤波60mHz.jpg Graphic file (type bmp)
+<figures//高通滤波60mHz.jpg>
+File: figures//高通滤波80mHz.jpg Graphic file (type bmp)
+<figures//高通滤波80mHz.jpg>
+[3]
+File: figures//高通滤波.png Graphic file (type bmp)
+<figures//高通滤波.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4]
+File: figures//陷波最低点.jpg Graphic file (type bmp)
+<figures//陷波最低点.jpg>
+File: figures//陷波测试结果.png Graphic file (type bmp)
+<figures//陷波测试结果.png>
+ [5]
+Overfull \hbox (51.42104pt too wide) in paragraph at lines 206--213
+ [][] 
+ []
+
+File: figures//总体放大性能.png Graphic file (type bmp)
+<figures//总体放大性能.png>
+File: figures//ECG信号检测调理电路_人体测试.jpg Graphic file (type bmp)
+<figures//ECG信号检测调理电路_人体测试.jpg>
+[6] [7] [8] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 11121 strings out of 477360
- 253418 string characters out of 5844045
- 607874 words of memory out of 5000000
- 31576 multiletter control sequences out of 15000+600000
+ 11503 strings out of 477360
+ 263114 string characters out of 5844045
+ 621009 words of memory out of 5000000
+ 31945 multiletter control sequences out of 15000+600000
  471898 words of font info for 85 fonts, out of 8000000 for 9000
  714 hyphenation exceptions out of 8191
- 85i,11n,99p,360b,429s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 85i,11n,99p,360b,416s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on report.pdf (4 pages).
+Output written on report.pdf (8 pages).
