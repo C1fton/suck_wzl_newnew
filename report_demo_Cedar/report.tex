@@ -224,7 +224,7 @@
 	
 	\subsubsection{人体测试}
 	
-	在测试完ECG信号检测调理电路的各类参数性能之后，我们进行人体测试，观察该电路实际能否起到处理心电信号，最终输出合格波形的作用。测试结果如图所示。
+	在测试完ECG信号检测调理电路的各类参数性能之后，我们进行人体测试，观察该电路实际能否起到处理心电信号，最终输出合格波形的作用。测试结果如图\ref{ECG信号检测调理电路_人体测试}所示。
 	
 	\begin{figure}[H]
 		\centering%使该部分内容居中
@@ -235,6 +235,8 @@
 
 	在示波器上，我们已经可以看出心电信号的波形，但同时，也发现其中混叠的杂波较多，心跳与心跳之间干扰明显，心电信号的增益还不够大，容易和杂波混在一起。
 	
+	\newpage
+	
 	\section{ECG心电监测系统}
 	
 	\subsection{总体目标}
@@ -243,11 +245,57 @@
 	
 	\subsubsection{系统框图及功能说明}
 	
+	ECG心电检测系统是由ECG信号检测调理电路同通信模块集成而成，主要用于实时检测人体心电信号，并发送到监测端，从而达到远程的心电监测。该ECG心电监测系统的系统框图及功能说明如图\ref{ECG系统框图}所示。
+	
+	\begin{figure}[H]
+		\centering%使该部分内容居中
+		\includegraphics[width=6.5in]{ECG系统框图}
+		\caption{ECG系统框图}%命名并编号
+		\label{ECG系统框图}%设置标签
+	\end{figure}
+	
+	\newpage
+	
 	\subsection{硬件设计与调试}
 	
 	\subsubsection{原理图设计}
 	
+	根据ECG心电监测系统的系统框图，我们也可以将系统设计大体分为三个部分，其具体设计及电路连接如图\ref{ECG电路原理图_前端信号接收处理部分}、\ref{ECG电路原理图_中间ADC处理部分}、\ref{ECG电路原理图_后端通信与输出部分}所示。
+	
+	\begin{figure}[H]
+		\centering
+		\begin{minipage}[t]{0.49\linewidth}%%%%%%%%%note2
+			\includegraphics[width=0.9\linewidth]{ECG电路原理图_前端信号接收处理部分}%%%%%%%%%note3
+			\caption{ECG电路原理图-前端信号接收处理部分}
+			\label{ECG电路原理图_前端信号接收处理部分}
+		\end{minipage}%
+		\begin{minipage}[t]{0.49\linewidth}
+			\includegraphics[width=0.9\linewidth]{ECG电路原理图_中间ADC处理部分}
+			\caption{ECG电路原理图-中间ADC处理部分}
+			\label{ECG电路原理图_中间ADC处理部分}
+		\end{minipage}
+		
+		\begin{minipage}[t]{0.49\linewidth}%%%%%%%%%note2
+			\includegraphics[width=0.9\linewidth]{ECG电路原理图_后端通信与输出部分}%%%%%%%%%note3
+			\caption{ECG电路原理图-后端通信与输出部分}
+			\label{ECG电路原理图_后端通信与输出部分}
+		\end{minipage}%
+	\end{figure}
+	
+	从原理图中，我们可以看出，每一个模块都集成了一块芯片分别负责不同的功能：AD8232主要用于采集人体心电信号，并对其进行滤波、放大等操作；中间部分的51单片机主要负责将处理的信号进行ADC转换；NRF905主要用于射频收发，进行信号的远程传输。
+	
 	\subsubsection{PCB设计}
+	
+	\begin{figure}[H]
+		\centering%使该部分内容居中
+		\includegraphics[width=3.5in]{ECG电路PCB图}
+		\caption{ECG电路PCB图}%命名并编号
+		\label{ECG电路PCB图}%设置标签
+	\end{figure}
+	
+	根据原理图，借助ADdesigner软件，生成PCB图，并将元件进行排布、连接和敷铜等操作，最终形成PCB设计图，如图所示。
+	
+	\subsection{硬件调试}
 	
 	\subsubsection{硬件调试}
 	
