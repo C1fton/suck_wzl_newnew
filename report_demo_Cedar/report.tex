@@ -224,7 +224,7 @@
 	
 	\subsubsection{人体测试}
 	
-	在测试完ECG信号检测调理电路的各类参数性能之后，我们进行人体测试，观察该电路实际能否起到处理心电信号，最终输出合格波形的作用。测试结果如图\ref{ECG信号检测调理电路_人体测试}所示。
+	在测试完ECG信号检测调理电路的各类参数性能之后，我们进行人体测试，观察该电路实际能否起到处理心电信号，最终输出合格波形的作用。测试结果如图所示。
 	
 	\begin{figure}[H]
 		\centering%使该部分内容居中
@@ -235,101 +235,85 @@
 
 	在示波器上，我们已经可以看出心电信号的波形，但同时，也发现其中混叠的杂波较多，心跳与心跳之间干扰明显，心电信号的增益还不够大，容易和杂波混在一起。
 	
-	\newpage
-	
 	\section{ECG心电监测系统}
 	
 	\subsection{总体目标}
 	
+	
+	
 	\subsubsection{系统框图及功能说明}
 	
-	ECG心电检测系统是由ECG信号检测调理电路同通信模块集成而成，主要用于实时检测人体心电信号，并发送到监测端，从而达到远程的心电监测。该ECG心电监测系统的系统框图及功能说明如图\ref{ECG系统框图}所示。
-	
-	\begin{figure}[H]
-		\centering%使该部分内容居中
-		\includegraphics[width=6.5in]{ECG系统框图}
-		\caption{ECG系统框图}%命名并编号
-		\label{ECG系统框图}%设置标签
-	\end{figure}
-
-	\newpage
-	
-	\subsection{硬件设计}
+	\subsection{硬件设计与调试}
 	
 	\subsubsection{原理图设计}
 	
-	根据ECG心电监测系统的系统框图，我们也可以将系统设计大体分为三个部分，其具体设计及电路连接如图\ref{ECG电路原理图_前端信号接收处理部分}、\ref{ECG电路原理图_中间ADC处理部分}、\ref{ECG电路原理图_后端通信与输出部分}所示。
-	
-	\begin{figure}[H]
-		\centering
-		\begin{minipage}[t]{0.49\linewidth}%%%%%%%%%note2
-			\includegraphics[width=0.9\linewidth]{ECG电路原理图_前端信号接收处理部分}%%%%%%%%%note3
-			\caption{ECG电路原理图-前端信号接收处理部分}
-			\label{ECG电路原理图_前端信号接收处理部分}
-		\end{minipage}%
-		\begin{minipage}[t]{0.49\linewidth}
-			\includegraphics[width=0.9\linewidth]{ECG电路原理图_中间ADC处理部分}
-			\caption{ECG电路原理图-中间ADC处理部分}
-			\label{ECG电路原理图_中间ADC处理部分}
-		\end{minipage}
-		
-		\begin{minipage}[t]{0.49\linewidth}%%%%%%%%%note2
-			\includegraphics[width=0.9\linewidth]{ECG电路原理图_后端通信与输出部分}%%%%%%%%%note3
-			\caption{ECG电路原理图-后端通信与输出部分}
-			\label{ECG电路原理图_后端通信与输出部分}
-		\end{minipage}%
-	\end{figure}
-
-	从原理图中，我们可以看出，每一个模块都集成了一块芯片分别负责不同的功能：AD8232主要用于采集人体心电信号，并对其进行滤波、放大等操作；中间部分的51单片机主要负责将处理的信号进行ADC转换；NRF905主要用于射频收发，进行信号的远程传输。
-	
 	\subsubsection{PCB设计}
 	
-	\begin{figure}[H]
-		\centering%使该部分内容居中
-		\includegraphics[width=3.5in]{ECG电路PCB图}
-		\caption{ECG电路PCB图}%命名并编号
-		\label{ECG电路PCB图}%设置标签
-	\end{figure}
-
-	根据原理图，借助ADdesigner软件，生成PCB图，并将元件进行排布、连接和敷铜等操作，最终形成PCB设计图，如图所示。
+	\subsubsection{硬件调试}
 	
-	\subsection{硬件调试}
+	（1）共模抑制比
 	
-	\subsubsection{共模抑制比}
+	（2）差模幅频特性
 	
-	\subsubsection{差模幅频特性}
+	（3）脉冲信号波形
 	
-	\subsubsection{脉冲信号波形}
+	（4）生物电信号波形
 	
-	\subsubsection{生物电信号波形}
+	（5）发射信号功率
 	
-	\subsubsection{发射信号功率}
+	（6）螺旋天线制作与测试
 	
-	\subsubsection{螺旋天线制作与测试}
-	
-	\subsubsection{拉距实验结果分析}
+	（7）拉距实验及结果分析（传输距离与功率、频率的关系，误码率等）
 	
 	\subsubsection{硬件电路整体性能分析}
 	
-	\subsection{软件设计}
+	\subsection{软件设计与调试}
 	
 	\subsubsection{软件工作流程框图}
 	
 	\subsubsection{软件功能设计}
 	
-	\subsection{软件调试}
+	（1）时序设计，如定时器，AD采样时间规划   
+	    
+	（2）AD功能                   
+	              
+	（3）串口功能              
+	                
+	（4）nRF905功能            
+	            
+	（5）其他
 	
-	\subsubsection{调试环境和方法}
 	
-	\subsubsection{波形采样，串口显示 }
+	\subsubsection{软件调试}
 	
-	\subsubsection{模块之间数据通讯}
+	（1）调试环境和方法
+	
+	（2）波形采样，串口显示   
+	               
+	（3）模块之间数据通讯      
 	
 	\section{总结}
 	
-	\subsection{韩寒：}
+	\subsection{系统装调过程中遇到的问题和解决情况}
 	
-	\subsection{谌梓轩：}
+	\subsection{心得体会}
+	
+	\subsubsection{韩寒}
+	
+	在这个学期的电子电路设计实验中，我学到了很多有用的新知识。
+	
+	首先，我们完成了上个学期绘制的两块PCB的装配与调试，在调试过程中，我发现人体信号的检测很困难，在老师的指导下，我了解到在电路中接入右脚屏蔽端的重要性。同时，在进行两块PCB的小信号性能测试过程中，我又对信号发生器、模拟心电信号发生器等设备的使用掌握的更加熟练。
+	
+	在软件设计部分，我在之前的学习中已经接触过C51及Keil的开发使用，而一学期的设计下来，我对使用Keil与Debugger联调、以及利用串口调试助手进行检验等技能掌握的更加熟练。同时老师提供的$Silicon \quad Lab$以及$Config2$软件也提高了我进行开发的效率。
+	
+	在软件设计完成后，我们小组反复进行调试，最终实现了按照100hz发送心电数据、借助按键实现射频工作频率及发射功率的调节、以及利用天线进行远距离射频传输等功能。实验课最后，我们还使用$MATLAB$开发了一个读取串口数据并实时绘图、计算心率的小程序。这些工作都很大程度上提高了我的编程水平以及调试能力，对我以后的学习生活有很大的帮助。
+	
+	总而言之，一个学期的电设实验下来，我对ECG监测、调试等内容都有了更加形象、深刻的认识，也大大提高了硬件调试、软件编程等方面的能力。通过实践结合理论的方式，我对之前电子电路基础课程中的学习内容也有了更加深入的理解，我相信我能将从电设实验课程上学会的知识充分地运用到我之后的学习之中，成为一名更加优秀的信电学子！
+	
+	\subsubsection{谌梓轩}
+	
+	\subsection{组员分工}
+	
 	
 	
 \end{document}
