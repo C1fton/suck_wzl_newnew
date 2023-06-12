@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.12.18)  10 JUN 2023 16:17
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.12.18)  10 JUN 2023 17:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -770,14 +770,26 @@ File: figures//总体放大性能.png Graphic file (type bmp)
 <figures//总体放大性能.png>
 File: figures//ECG信号检测调理电路_人体测试.jpg Graphic file (type bmp)
 <figures//ECG信号检测调理电路_人体测试.jpg>
-[6] [7] [8] (./report.aux) ) 
+[6] [7]
+File: figures//ECG系统框图.png Graphic file (type bmp)
+<figures//ECG系统框图.png>
+ [8]
+File: figures//ECG电路原理图_前端信号接收处理部分.png Graphic file (type bmp)
+<figures//ECG电路原理图_前端信号接收处理部分.png>
+File: figures//ECG电路原理图_中间ADC处理部分.png Graphic file (type bmp)
+<figures//ECG电路原理图_中间ADC处理部分.png>
+File: figures//ECG电路原理图_后端通信与输出部分.png Graphic file (type bmp)
+<figures//ECG电路原理图_后端通信与输出部分.png>
+File: figures//ECG电路PCB图.png Graphic file (type bmp)
+<figures//ECG电路PCB图.png>
+ [9] [10] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 11503 strings out of 477360
- 263114 string characters out of 5844045
- 621009 words of memory out of 5000000
- 31945 multiletter control sequences out of 15000+600000
+ 11609 strings out of 477360
+ 266312 string characters out of 5844045
+ 621056 words of memory out of 5000000
+ 32051 multiletter control sequences out of 15000+600000
  471898 words of font info for 85 fonts, out of 8000000 for 9000
  714 hyphenation exceptions out of 8191
  85i,11n,99p,360b,416s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on report.pdf (8 pages).
+Output written on report.pdf (10 pages).
