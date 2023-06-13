@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.12.18)  10 JUN 2023 17:53
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.12.18)  13 JUN 2023 22:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -776,20 +776,42 @@ File: figures//ECG系统框图.png Graphic file (type bmp)
  [8]
 File: figures//ECG电路原理图_前端信号接收处理部分.png Graphic file (type bmp)
 <figures//ECG电路原理图_前端信号接收处理部分.png>
-File: figures//ECG电路原理图_中间ADC处理部分.png Graphic file (type bmp)
-<figures//ECG电路原理图_中间ADC处理部分.png>
+File: figures//ECG电路原理图_中间滤波处理部分.png Graphic file (type bmp)
+<figures//ECG电路原理图_中间滤波处理部分.png>
 File: figures//ECG电路原理图_后端通信与输出部分.png Graphic file (type bmp)
 <figures//ECG电路原理图_后端通信与输出部分.png>
 File: figures//ECG电路PCB图.png Graphic file (type bmp)
 <figures//ECG电路PCB图.png>
- [9] [10] (./report.aux) ) 
+ [9]
+File: figures//共模输入.jpg Graphic file (type bmp)
+<figures//共模输入.jpg>
+File: figures//差模输入.jpg Graphic file (type bmp)
+<figures//差模输入.jpg>
+File: figures//幅频特性40Hz.jpg Graphic file (type bmp)
+<figures//幅频特性40Hz.jpg>
+File: figures//幅频特性80Hz.jpg Graphic file (type bmp)
+<figures//幅频特性80Hz.jpg>
+ [10]
+File: figures//差模幅频特性.png Graphic file (type bmp)
+<figures//差模幅频特性.png>
+File: figures//脉冲波特性.jpg Graphic file (type bmp)
+<figures//脉冲波特性.jpg>
+File: figures//生物电测试.jpg Graphic file (type bmp)
+<figures//生物电测试.jpg>
+ [11]
+File: figures//发射信号功率与工作频率.jpg Graphic file (type bmp)
+<figures//发射信号功率与工作频率.jpg>
+ [12]
+File: figures//软件工作流程框图.jpg Graphic file (type bmp)
+<figures//软件工作流程框图.jpg>
+ [13] [14] [15] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 11609 strings out of 477360
- 266312 string characters out of 5844045
- 621056 words of memory out of 5000000
- 32051 multiletter control sequences out of 15000+600000
+ 11813 strings out of 477360
+ 270080 string characters out of 5844045
+ 628155 words of memory out of 5000000
+ 32255 multiletter control sequences out of 15000+600000
  471898 words of font info for 85 fonts, out of 8000000 for 9000
  714 hyphenation exceptions out of 8191
- 85i,11n,99p,360b,416s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 85i,12n,99p,360b,416s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on report.pdf (10 pages).
+Output written on report.pdf (15 pages).

@@ -15,20 +15,20 @@
 \contentsline {subsection}{\numberline {3.}硬件调试}{10}{}%
 \contentsline {subsubsection}{\numberline {(1)}共模抑制比}{10}{}%
 \contentsline {subsubsection}{\numberline {(2)}差模幅频特性}{10}{}%
-\contentsline {subsubsection}{\numberline {(3)}脉冲信号波形}{10}{}%
-\contentsline {subsubsection}{\numberline {(4)}生物电信号波形}{10}{}%
-\contentsline {subsubsection}{\numberline {(5)}发射信号功率}{10}{}%
-\contentsline {subsubsection}{\numberline {(6)}螺旋天线制作与测试}{10}{}%
-\contentsline {subsubsection}{\numberline {(7)}拉距实验结果分析}{10}{}%
-\contentsline {subsubsection}{\numberline {(8)}硬件电路整体性能分析}{10}{}%
-\contentsline {subsection}{\numberline {4.}软件设计}{10}{}%
-\contentsline {subsubsection}{\numberline {(1)}软件工作流程框图}{10}{}%
-\contentsline {subsubsection}{\numberline {(2)}软件功能设计}{10}{}%
-\contentsline {subsection}{\numberline {5.}软件调试}{10}{}%
-\contentsline {subsubsection}{\numberline {(1)}调试环境和方法}{10}{}%
-\contentsline {subsubsection}{\numberline {(2)}波形采样，串口显示 }{10}{}%
-\contentsline {subsubsection}{\numberline {(3)}模块之间数据通讯}{10}{}%
-\contentsline {section}{\numberline {\CJKnumber {3}、}总结}{10}{}%
-\contentsline {subsection}{\numberline {1.}韩寒：}{10}{}%
-\contentsline {subsection}{\numberline {2.}谌梓轩：}{10}{}%
+\contentsline {subsubsection}{\numberline {(3)}脉冲信号波形}{11}{}%
+\contentsline {subsubsection}{\numberline {(4)}生物电信号波形}{12}{}%
+\contentsline {subsubsection}{\numberline {(5)}发射信号功率}{12}{}%
+\contentsline {subsubsection}{\numberline {(6)}螺旋天线制作与测试}{12}{}%
+\contentsline {subsubsection}{\numberline {(7)}拉距实验结果分析}{13}{}%
+\contentsline {subsubsection}{\numberline {(8)}硬件电路整体性能分析}{13}{}%
+\contentsline {subsection}{\numberline {4.}软件设计与调试}{13}{}%
+\contentsline {subsubsection}{\numberline {(1)}软件工作流程框图}{13}{}%
+\contentsline {subsubsection}{\numberline {(2)}软件功能设计}{14}{}%
+\contentsline {subsubsection}{\numberline {(3)}软件调试}{14}{}%
+\contentsline {section}{\numberline {\CJKnumber {3}、}总结}{14}{}%
+\contentsline {subsection}{\numberline {1.}系统装调过程中遇到的问题和解决情况}{14}{}%
+\contentsline {subsection}{\numberline {2.}心得体会}{14}{}%
+\contentsline {subsubsection}{\numberline {(1)}韩寒：}{14}{}%
+\contentsline {subsubsection}{\numberline {(2)}谌梓轩：}{14}{}%
+\contentsline {subsection}{\numberline {3.}组员分工}{15}{}%
 \contentsfinish 
