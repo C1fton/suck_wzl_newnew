@@ -293,7 +293,7 @@
 		\label{ECG电路PCB图}%设置标签
 	\end{figure}
 	
-	根据原理图，借助ADdesigner软件，生成PCB图，并将元件进行排布、连接和敷铜等操作，最终形成PCB设计图，如图所示。
+	根据原理图，借助$Altium \quad Designer$软件，生成PCB图，并将元件进行排布、连接和敷铜等操作，最终形成PCB设计图，如图所示。
 	
 	\subsection{硬件调试}
 	
@@ -328,12 +328,114 @@
 	
 	\subsubsection{软件功能设计}
 	
-	（1）时序设计，如定时器，AD采样时间规划   
+	（1）时序设计  
+	    
+	    时序设计代码如下，定时器$Timer-Count-1$初始为0，每1ms进1，当其数值达到10之后，开启ECG采样ADC并将定时器归零，从而达到每0.01s进行一次ECG采样（即采样频率为100Hz）
+	    
+	    \begin{lstlisting}[language=C]
+	    	void timer0_int (void) interrupt 1
+	    	{
+	    		TH0 = 0xfc;
+	    		TL0 = 0x18;			//1ms定时中断
+	    		
+	    		Key_Scan();
+	    		//	Run_treat();
+	    		++Timer_Count_1;
+	    		
+	    		if (Timer_Count_1 > 9)  //0.01s开启ECG的采样
+	    		{
+	    			timer_flag_ECG = 1;
+	    			Timer_Count_1 = 0;
+	    		}
+	    	}
+	    \end{lstlisting}
 	    
 	（2）AD功能                   
+	        
+	        ADC初始设置代码如下 
+	         \begin{lstlisting}[language=C]
+	         	void ADC0_Init_ECG (void) //ECG_ADC
+	         	{
+	         		ADC0CN = 0x00;                      // ADC0 disabled, normal tracking, 
+	         		// conversion triggered on "ADC0BUSY" set
+	         		REF0CN = 0x08;                      // disable on-chip VREF and buffer
+	         		AMX0P = 0x13;      //ECG传感器开启  // ADC0 positive input = P1.1 
+	         		AMX0N = 0x1F;                       // ADC0 negative input = GND
+	         		
+	         		ADC0CF = ((SYSCLK/3000000)-1)<<3;   // set SAR clock to 3MHz
+	         		ADC0CF &= ~0x04;                    // right-justify results 
+	         		EIE1 |= 0x08;              // enable ADC0 conversion complete int.
+	         		AD0EN = 1;                          // enable ADC0
+	         	}
+	         \end{lstlisting}
+	         
+	         读取串口数值并作AD转换处理的代码如下
+	          \begin{lstlisting}[language=C]
+	         	void ADC0_ISR (void) interrupt 10
+	         	{
+	         		unsigned long result=0;
+	         		// unsigned long mV;                         // Measured voltage in mV
+	         		AD0INT = 0;                     // Clear ADC0 conv. complete flag
+	         		result = ADC0;
+	         		Temp =  result * 3300 / 1023;   
+	         		//   printf("P1.1 voltage: %ld mV\n",mV);
+	         \end{lstlisting}
 	              
-	（3）串口功能              
-	                
+	（3）串口功能  
+	            
+	       通过Uart发送int型数据/char型数据/字符串数据的代码如下
+	       \begin{lstlisting}[language=C]
+	       	void SendUint(uint Data)
+	       	{
+	       		Uart_Send_Buff[0] = (Data / 1000 % 10) +0x30;
+	       		Uart_Send_Buff[1] = (Data / 100 % 10) +0x30;
+	       		Uart_Send_Buff[2] = (Data / 10 % 10) +0x30;
+	       		Uart_Send_Buff[3] = (Data %10) +0x30;
+	       		//	Uart1_tx_len = 4;
+	       		for (Uart_Send_Count=0;Uart_Send_Count<4;Uart_Send_Count++)
+	       		{
+	       			SBUF0 = Uart_Send_Buff[Uart_Send_Count];
+	       			while(TI0 ==0){}
+	       			TI0 = 0;
+	       		}
+	       	}
+	       	\end{lstlisting}
+	       
+	       \begin{lstlisting}[language=C]
+	       	void SendUchar(char Data)
+	       	{
+	       		Uart_Send_Buff[0] = (Data / 10 % 10) +0x30;
+	       		Uart_Send_Buff[1] = (Data %10) +0x30;
+	       		//	Uart1_tx_len = 2;
+	       		for (Uart_Send_Count=0;Uart_Send_Count<2;Uart_Send_Count++)
+	       		{
+	       			SBUF0 = Uart_Send_Buff[Uart_Send_Count];
+	       			while(TI0 ==0){}
+	       			TI0 = 0;
+	       		}
+	       	}
+	       \end{lstlisting}
+	       
+	        \begin{lstlisting}[language=C]
+	       	void SendString(char *s)
+	       	{
+	       		uchar	i=0;
+	       		while (*s)
+	       		{
+	       			Uart_Send_Buff[i++] = *s++;
+	       		}
+	       		//Uart1_tx_len = i;
+	       		for (Uart_Send_Count=0;Uart_Send_Count<i;Uart_Send_Count++)
+	       		{
+	       			SBUF0 = Uart_Send_Buff[Uart_Send_Count];
+	       			while(TI0 ==0){}
+	       			TI0 = 0;
+	       		}
+	       	}
+	       \end{lstlisting}
+	       
+	       在$main$函数中，我们将ADC输出的数值$Temp$通过$void \quad SendUint(uint \quad Data)$函数发送，并配合字符串函数发送指定格式，我们就能在串口中读取到相应的数值。
+	               
 	（4）nRF905功能            
 	            
 	（5）其他
